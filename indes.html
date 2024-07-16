@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapy by Sanya - Professional Mental Health Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A202C',
+                        secondary: '#4A5568',
+                        accent: '#ED8936',
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header x-data="{ isOpen: false }" class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="text-xl font-bold text-primary h-12 w-14"><img src="/image/Screenshot_2024-07-16_113048-removebg-preview.png" alt=""></div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-secondary hover:text-accent transition">Home</a>
+                    <a href="#about" class="text-secondary hover:text-accent transition">About</a>
+                    <a href="#services" class="text-secondary hover:text-accent transition">Services</a>
+                    <a href="#testimonials" class="text-secondary hover:text-accent transition">Testimonials</a>
+                    <a href="#Blogs" class="text-secondary hover:text-accent transition">Blogs</a>
+                    <a href="#contact" class="text-secondary hover:text-accent transition">Contact</a>
+                </div>
+                <button @click="isOpen = !isOpen" class="md:hidden text-secondary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div x-show="isOpen" class="md:hidden mt-4 space-y-2">
+                <a href="#home" class="block text-secondary hover:text-accent transition">Home</a>
+                <a href="#about" class="block text-secondary hover:text-accent transition">About</a>
+                <a href="#services" class="block text-secondary hover:text-accent transition">Services</a>
+                <a href="#testimonials" class="block text-secondary hover:text-accent transition">Testimonials</a>
+                <a href="#blogs" class="block text-secondary hover:text-accent transition">Blogs</a>
+                <a href="#contact" class="block text-secondary hover:text-accent transition">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="home" class="relative overflow-hidden bg-gradient-to-br from-purple-100 to-indigo-200 min-h-screen flex items-center">
+        <div class="absolute inset-0 bg-pattern opacity-10"></div>
+        <div class="container mx-auto px-6 py-16 md:py-24 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h1 class="text-5xl md:text-6xl font-extrabold mb-6 text-primary leading-tight">
+                        Being Happy is <span class="text-accent">Always</span> in Vogue!
+                    </h1>
+                    <p class="text-xl mb-8 text-secondary font-light typewriter"></p>
+                    <button class="bg-accent hover:bg-accent-dark text-white font-bold py-4 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+                        Book a Consultation
+                    </button>
+                    <div class="mt-12 flex flex-wrap gap-6">
+                        <span class="text-sm flex items-center text-secondary bg-white bg-opacity-50 rounded-full px-4 py-2">
+                            <svg class="w-5 h-5 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Licensed Psychologist
+                        </span>
+                        <span class="text-sm flex items-center text-secondary bg-white bg-opacity-50 rounded-full px-4 py-2">
+                            <svg class="w-5 h-5 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span id="experience-years">0</span>+ Years Experience
+                        </span>
+                        <span class="text-sm flex items-center text-secondary bg-white bg-opacity-50 rounded-full px-4 py-2">
+                            <svg class="w-5 h-5 mr-2 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                            </svg>
+                            Confidential Sessions
+                        </span>
+                    </div>
+                </div>
+                <div class="md:w-1/2 relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-accent to-accent-light opacity-20 rounded-full blur-3xl"></div>
+                    <img src="/image/Screenshot_2024-07-14_220907-removebg-preview.png" alt="Therapy session illustration" class="w-full rounded-lg shadow-2xl relative z-10">
+                </div>
+            </div>
+        </div>
+    </main>
+    <section id="what-we-do" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center lg:items-stretch">
+            <div class="lg:w-1/2 mb-12 lg:mb-0">
+                <img src="/image/Screenshot 2024-07-16 080601.png" alt="The Friendly Couch logo" class="w-full rounded-2xl shadow-2xl">
+            </div>
+            <div class="hidden lg:block h-auto border-l-2 border-gray-300 mx-12"></div>
+            <div class="lg:w-1/2 lg:pl-12 text-center lg:text-left">
+                <h2 class="text-4xl font-bold mb-6 text-gray-800 font-serif">WHAT WE DO</h2>
+                <p class="text-xl mb-6 text-gray-700 font-sans leading-relaxed">
+                    With so many different types of professionals (and quacks) in the field, how does one know who to choose?
+                </p>
+                <div class="space-y-4 mb-8">
+                    <p class="text-lg font-semibold text-gray-800 font-sans">Therapy is for EVERYONE</p>
+                    <p class="text-gray-600 font-sans">A generic thought process is that only those with a disorder or "mental problem" need therapy. However, this is not true.</p>
+                    <p class="text-gray-600 font-sans">Therapy provides you with a safe space to share your feelings and emotions. You can share anything and everything.</p>
+                    <p class="text-lg font-semibold text-gray-800 font-sans">Are you feeling overwhelmed? Start your healing journey!</p>
+                </div>
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                    <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold rounded-full px-6 py-3 transition duration-300 ease-in-out transform hover:scale-105">
+                        Book a Session
+                    </button>
+                    <button class="bg-gray-800 hover:bg-gray-900 text-white font-bold rounded-full px-6 py-3 transition duration-300 ease-in-out transform hover:scale-105">
+                        Seek Supervision
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <!-- Feature Section -->
+    <!-- Features Section with Slider -->
+    <section id="features" class="py-16 bg-gray-100 overflow-hidden">
+        <div class="container mx-auto px-6 max-w-screen-md">
+            <h2 class="text-3xl font-serif font-bold mb-8 text-primary text-center">Featured on</h2>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col items-center">
+                        <img src="/image/eros now.webp" alt="eros now" class="h-32 mb-4 rounded-lg object-cover">
+                        <h3 class="text-xl font-bold mb-4 text-primary">eros now</h3>
+                    </div>
+                    <div class="swiper-slide bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col items-center">
+                        <img src="/image/Enactus.webp" alt="Enactus" class="h-32 mb-4 rounded-lg object-cover">
+                        <h3 class="text-xl font-bold mb-4 text-primary">Enactus</h3>
+                    </div>
+                    <div class="swiper-slide bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col items-center">
+                        <img src="/image/girlup bhumi.webp" alt="girlup bhumi" class="h-32 mb-4 rounded-lg object-cover">
+                        <h3 class="text-xl font-bold mb-4 text-primary">girlup bhumi</h3>
+                    </div>
+                    <div class="swiper-slide bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col items-center">
+                        <img src="/image/moms presso.webp" alt="eros now" class="h-32 mb-4 rounded-lg object-cover">
+                        <h3 class="text-xl font-bold mb-4 text-primary">mom presso</h3>
+                    </div>
+                    <div class="swiper-slide bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col items-center">
+                        <img src="/image/enlightenfy.webp" alt="Enactus" class="h-32 mb-4 rounded-lg object-cover">
+                        <h3 class="text-xl font-bold mb-4 text-primary">enlightenfy</h3>
+                    </div>
+                    <div class="swiper-slide bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col items-center">
+                        <img src="/image/now n me.webp" alt="girlup bhumi" class="h-32 mb-4 rounded-lg object-cover">
+                        <h3 class="text-xl font-bold mb-4 text-primary">now n me</h3>
+                    </div>
+                    <div class="swiper-slide bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col items-center">
+                        <img src="/image/sheroes-squarelogo-1564566347458.webp" alt="eros now" class="h-32 mb-4 rounded-lg object-cover">
+                        <h3 class="text-xl font-bold mb-4 text-primary">sheroes</h3>
+                    </div>
+                    <div class="swiper-slide bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col items-center">
+                        <img src="/image/unmukt.webp" alt="Enactus" class="h-32 mb-4 rounded-lg object-cover">
+                        <h3 class="text-xl font-bold mb-4 text-primary">unmukt</h3>
+                    </div>
+                    <div class="swiper-slide bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300 flex flex-col items-center">
+                        <img src="/image/stay uncle.webp" alt="girlup bhumi" class="h-32 mb-4 rounded-lg object-cover">
+                        <h3 class="text-xl font-bold mb-4 text-primary">stay uncle</h3>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    
+    
+    
+    
+
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-serif font-bold mb-12 text-gray-800 text-center">About Us</h2>
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="/image/WhatsApp Image 2020-09-25 at 12_09_51.webp" alt="About Therapy by Sanya" class="w-full rounded-2xl shadow-2xl">
+                </div>
+                <div class="lg:w-1/2 space-y-6">
+                    <p class="text-xl font-semibold text-gray-700">Hey there! Thanks for stopping by!</p>
+                    <p class="text-lg text-gray-600">My name is Dr Saniya Bedi. I am a counseling psychologist, researcher, and content creator.</p>
+                    <p class="text-gray-600">With my experience of working with the young and old, I have come across courageous people who still have the grit to get up despite falling many times. This site belongs to every person who is ready to give life a second chance.</p>
+                    <p class="text-lg font-semibold text-gray-700">My work offers <span class="font-bold text-indigo-600">EVERYONE</span> a safe space to heal. Self-care is <span class="font-bold text-indigo-600">NOT</span> selfish!</p>
+                    <p class="text-gray-600">My page on Instagram - <a href="https://www.instagram.com/therapybysaniya/" class="text-indigo-600 hover:underline">@therapybysaniya</a> provides doable tips for feeling better!</p>
+                    <p class="text-gray-600">So embark on this journey with me where you trust, vent, and transform!</p>
+                    <p class="text-gray-600 italic">With over a decade of experience, our team of licensed psychologists is committed to helping you navigate life's complexities and build resilience.</p>
+                    <div class="pt-6">
+                        <a href="#contact" class="inline-block bg-indigo-600 text-white font-semibold px-6 py-3 rounded-full hover:bg-indigo-700 transition duration-300 ease-in-out transform hover:scale-105">Start Your Journey</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education-experience" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-serif font-bold mb-12 text-gray-800 text-center">Education & Experience</h2>
+            
+            <div class="mb-12">
+                <p class="text-lg text-gray-700 mb-6">
+                    I am a Counselling Psychologist based out of India. I offer <span class="font-semibold">online counselling</span> pan India and abroad through three modes:
+                </p>
+                <ul class="list-disc list-inside text-gray-600 ml-4 space-y-2">
+                    <li>Video Call</li>
+                    <li>Audio Call</li>
+                    <li>Chat</li>
+                </ul>
+            </div>
+    
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-indigo-600">Education</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <p class="text-gray-700">PhD from SGT University</p>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <p class="text-gray-700">Masters in Applied Psychology from Tata Institute of Social Sciences (TISS), Mumbai</p>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <p class="text-gray-700">Graduation in Applied Psychology from the University of Delhi</p>
+                        </li>
+                    </ul>
+                </div>
+    
+                <div>
+                    <h3 class="text-2xl font-bold mb-6 text-indigo-600">Experience</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <div>
+                                <p class="font-semibold text-gray-800">2020-Present</p>
+                                <p class="text-gray-700">Founder and Lead Therapist at Therapy by Saniya</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <div>
+                                <p class="font-semibold text-gray-800">2017-Present</p>
+                                <p class="text-gray-700">Consultant Psychologist at Delhi University</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <div>
+                                <p class="font-semibold text-gray-800">2016- 17</p>
+                                <p class="text-gray-700">Consultant Psychologist at St. Pauls Sr. Secondary School, Asnani School by Pearson (Bhopal)</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <div>
+                                <p class="font-semibold text-gray-800">2013- 15</p>
+                                <p class="text-gray-700">BMC School, New Horizons Child Development Centre, Swadhar Family Counselling Centre & Cooper Hospital (Mumbai) </p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <div>
+                                <p class="font-semibold text-gray-800">2012- 13</p>
+                                <p class="text-gray-700">Army Public School, Dhaula Kuan & Max Hospital (New Delhi)y</p>
+                            </div>
+                        </li>
+
+                        <!-- Add more experience items here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-5xl font-serif font-bold mb-16 text-gray-800 text-center">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Individual Therapy -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-cover bg-center rounded-t-2xl" style="background-image: url('/image/Screenshot 2024-07-16 092145.png');"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-indigo-600">Individual Therapy</h3>
+                        <p class="text-gray-600 mb-4 italic">"Are you feeling blue? Do you need a place to vent out? Join me for an individual session!"</p>
+                        <p class="text-gray-700 mb-6">In the therapy sessions, we will work towards understanding your concerns and will work out a way to solve the same! It's going to be a mix of venting out and skill building!</p>
+                        <button class="w-full bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition duration-300 text-lg font-semibold">Book a Session</button>
+                    </div>
+                </div>
+    
+                <!-- Couples Counseling -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-cover bg-center rounded-t-2xl" style="background-image: url('/image/Screenshot\ 2024-07-14\ 202706.png');"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-indigo-600">Couples Counseling</h3>
+                        <p class="text-gray-600 mb-4 italic">"And they lived happily ever after... Cannot resonate with this? Fret not! After all, life is not a movie!"</p>
+                        <p class="text-gray-700 mb-6">If you feel your relationship requires work, join me for a couple-therapy session! We will discuss the concerns that you both are facing and learn how to communicate better.</p>
+                        <button class="w-full bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition duration-300 text-lg font-semibold">Book a Session</button>
+                    </div>
+                </div>
+    
+                <!-- Family Therapy -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-cover bg-center rounded-t-2xl" style="background-image: url('/image/Screenshot 2024-07-16 092058.png');"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-indigo-600">Family Therapy</h3>
+                        <p class="text-gray-600 mb-4 italic">"My parents don't understand me" "I cannot stand my family"</p>
+                        <p class="text-gray-700 mb-6">If you resonate with these examples, looks like it is time to talk it out! Let's sit together and understand where is the gap!</p>
+                        <button class="w-full bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition duration-300 text-lg font-semibold">Book a Session</button>
+                    </div>
+                </div>
+    
+                <!-- Group Therapy -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-cover bg-center rounded-t-2xl" style="background-image: url('/image/Screenshot 2024-07-16 092124.png');"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-indigo-600">Group Therapy</h3>
+                        <p class="text-gray-600 mb-4 italic">"Together, we are stronger."</p>
+                        <p class="text-gray-700 mb-6">Providing a supportive group environment to share experiences and learn from others.</p>
+                        <button class="w-full bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition duration-300 text-lg font-semibold">Book a Session</button>
+                    </div>
+                </div>
+    
+                <!-- Counseling for Parents -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-cover bg-center rounded-t-2xl" style="background-image: url('/image/Screenshot 2024-07-16 092145.png');"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-indigo-600">Counseling for Parents</h3>
+                        <p class="text-gray-600 mb-4 italic">"Sometimes change in the environment can help our children."</p>
+                        <p class="text-gray-700 mb-6">Get in touch with me if you wish to speak about your child/children. Let's work together on understanding their concerns and helping them out!</p>
+                        <button class="w-full bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition duration-300 text-lg font-semibold">Book a Session</button>
+                    </div>
+                </div>
+    
+                <!-- Workshops & Seminars -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2">
+                    <div class="h-48 bg-cover bg-center rounded-t-2xl" style="background-image: url('/image/ss.webp');"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-4 text-indigo-600">Workshops & Seminars</h3>
+                        <p class="text-gray-600 mb-4 italic">"Knowledge is power, especially when it comes to mental health."</p>
+                        <p class="text-gray-700 mb-6">Educational sessions on various mental health topics for individuals, groups, and organizations.</p>
+                        <button class="w-full bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition duration-300 text-lg font-semibold">Book a Session</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-4xl font-serif font-bold mb-12 text-gray-800 text-center">What Our Clients Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <p class="text-gray-600 mb-6 italic">"When I met Saniya Bedi, I was very depressed and lonely, only she was the one who listened to my problems without judging me. Weekly sessions made me feel stronger and happier than before. I'm glad I met her at my college. My half of the burden is gone."</p>
+                    <div class="flex items-center">
+                        <img src="image/clinent.webp" alt="Client photo" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold text-gray-800">Client 1</p>
+                            <p class="text-sm text-gray-500">Individual Therapy</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <p class="text-gray-600 mb-6 italic">"My sessions with the counsellor have been pretty insightful and helpful to say the least. Saniya Ma'am has helped a lot to get a better perspective on my own self and I am still looking forward to begin with my new sessions as the college reopens."</p>
+                    <div class="flex items-center">
+                        <img src="image/client2.webp" alt="Client photo" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold text-gray-800">Client 2</p>
+                            <p class="text-sm text-gray-500">Student Counseling</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <p class="text-gray-600 mb-6 italic">"I have been attending sessions with Saniya ma'am for about two months now. Her sessions have helped me understand my strengths and qualities which makes it very easy for me to face problems in life. She has suggested me ways to cope with anxiety and stress that are really effective."</p>
+                    <div class="flex items-center">
+                        <img src="image/client3.webp" alt="Client photo" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold text-gray-800">Client 3</p>
+                            <p class="text-sm text-gray-500">Anxiety Management</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Testimonial 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <p class="text-gray-600 mb-6 italic">"The session was really fruitful. I think I was dealing with some serious anxiety issues. But the most important statement that I remember right after my session 'Embrace your anxiety'. That helped me to a great extent. I started writing down everything in a diary just like Ma'am Bedi explained me to. Within a week of following the same, I felt that my life seemed to be way sorted and good than what I thought it was earlier."</p>
+                    <div class="flex items-center">
+                        <img src="image/client 5.webp" alt="Client photo" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold text-gray-800">Client 4</p>
+                            <p class="text-sm text-gray-500">Anxiety Management</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Testimonial 5 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <p class="text-gray-600 mb-6 italic">"I have really felt great after talking to you without the fear of being judged. I have felt kind of really unapologetic for being myself. Improved my self esteem and learnt to take up space in the world!"</p>
+                    <div class="flex items-center">
+                        <img src="image/cient 4.webp" alt="Client photo" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold text-gray-800">Client 5</p>
+                            <p class="text-sm text-gray-500">Personal Growth</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Testimonial 6 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <p class="text-gray-600 mb-6 italic">"I just had one session and it was like I felt a weight has been lifted off my soul. I felt way more relieved and talking and listening to you, I saw a silver lining amidst the dark clouds and a hope bloomed somewhere that may be I will find some way out of the pit I feel I am in. Looking forward to some great time!!"</p>
+                    <div class="flex items-center">
+                        <img src="image/cliebt6.webp" alt="Client photo" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold text-gray-800">Client 6</p>
+                            <p class="text-sm text-gray-500">Crisis Intervention</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Testimonial 7 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <p class="text-gray-600 mb-6 italic">"My experience at the sessions was very helpful. I came across many things I never knew about myself specially through the 'tree of strengths'. The conversation with ma'am has always been friendly which makes me comfortable to talk about my problems. She always gives me the best advice and helps me a lot."</p>
+                    <div class="flex items-center">
+                        <img src="image/client7.webp" alt="Client photo" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold text-gray-800">Client 7</p>
+                            <p class="text-sm text-gray-500">Self-Discovery</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Testimonial 8 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <p class="text-gray-600 mb-6 italic">"I was in a dilemma of whether or not to consult any practitioner for the issue I had. But when I had sessions with her, she made me realise that it is okay not to be tough all the time. I came to know the importance of self-love, self-care, self-respect, self-appreciation. And importance of reminding yourself that you are your own hero."</p>
+                    <div class="flex items-center">
+                        <img src="image/client 8.webp" alt="Client photo" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold text-gray-800">Client 8</p>
+                            <p class="text-sm text-gray-500">Self-Esteem Building</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Testimonial 9 -->
+                <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition duration-300" style="font-family: 'Poppins', sans-serif;">
+                    <p class="text-gray-600 mb-6 italic">"Saniya is a great counsellor who listens to your problems with a very relaxed mind and also makes you comfortable. She gives practical solutions which you can easily incorporate in your daily routine. Also, her calm and cheerful demeanour is a natural quality. I trust her fully and would highly recommend and vouch for her."</p>
+                    <div class="flex items-center">
+                        <img src="image/client 9.webp" alt="Client photo" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <p class="font-semibold text-gray-800">Client 9</p>
+                            <p class="text-sm text-gray-500">Life Coaching</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-gray-50 min-h-screen">
+        <div class="max-w-5xl mx-auto p-8 bg-white shadow-2xl rounded-3xl">
+            <h2 class="text-5xl font-serif font-bold mb-16 text-gray-900 text-center">All About Therapy</h2>
+            
+            <div class="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+                <div class="border border-gray-300 rounded-lg p-6 bg-white shadow-md">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Therapy is a process intended to 
+                        <span class="font-semibold text-gray-600 decoration-dotted">
+                            heal in a non-judgmental environment
+                        </span>.
+                    </p>
+                </div>
+                
+                <div class="border border-gray-300 rounded-lg p-6 bg-white shadow-md">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        <span class="font-semibold text-gray-600 decoration-dotted">Absolutely not!</span> I respect you unconditionally for the person you are!
+                    </p>
+                </div>
+                
+                <div class="border border-gray-300 rounded-lg p-6 bg-white shadow-md">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Confidentiality</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        For adults: Everything you share here stays here. It's advisable to share a trusted person's contact for emergencies.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        For children: I would need to be in touch with parents/guardians/trusted adults only to ensure your safety when I'm not around.
+                    </p>
+                </div>
+                
+                <div class="border border-gray-300 rounded-lg p-6 bg-white shadow-md">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Therapeutic Orientation</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                        I usually use an eclectic approach in my therapy sessions. This means that I use a combination of therapies.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Some of the therapies that I use are Cognitive Behavioural Therapy, Behavioural Therapy, Art Therapy, Play Therapy, and Acceptance and Commitment Therapy, among others.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="mt-12 text-center">
+                <button class="w-full max-w-xs bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition duration-300 text-lg font-semibold">
+                    Schedule a Session
+                </button>
+            </div>
+        </div>
+    </section>
+    
+        
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-4xl font-serif font-bold mb-12 text-gray-800 text-center">Get In Touch</h2>
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-700">Contact Information</h3>
+                    <p class="text-gray-600 mb-6">Feel free to reach out to us with any questions or to schedule an appointment. We're here to help.</p>
+                    <div class="space-y-4">
+                        <p class="flex items-center text-gray-600">
+                            <svg class="w-6 h-6 mr-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            (123) 456-7890
+                        </p>
+                        <p class="flex items-center text-gray-600">
+                            <svg class="w-6 h-6 mr-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            contact@therapybysanya.com
+                        </p>
+                        <p class="flex items-center text-gray-600">
+                            <svg class="w-6 h-6 mr-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            123 Therapy Lane, Wellness City, ST 12345
+                        </p>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <form class="bg-white p-8 rounded-2xl shadow-lg">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                            <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your Name">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your Email">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                            <textarea id="message" name="message" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your Message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:-translate-y-1">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://www.instagram.com/therapybysaniya/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-400 transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="text-white hover:text-indigo-400 transition duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+            </div>
+            <p>&copy; 2024 Therapy by Sanya. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Include Swiper JS -->
+     <script src="index.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Swiper('.swiper-container', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+
+            // Set years of experience
+            const experienceYears = 5; // Set the number of years
+            document.getElementById('experience-years').textContent = experienceYears;
+
+            // Typewriter effect
+            const typewriterText = [
+                "Licensed Psychologist",
+                "Over 5 Years of Experience",
+                "Confidential Sessions"
+            ];
+            let typewriterIndex = 0;
+            const typewriterElement = document.querySelector(".typewriter");
+
+            function typeWriter() {
+                if (typewriterIndex < typewriterText.length) {
+                    let currentText = typewriterText[typewriterIndex];
+                    typewriterElement.textContent = currentText;
+                    typewriterIndex++;
+                    setTimeout(typeWriter, 2000);
+                } else {
+                    typewriterIndex = 0;
+                    typeWriter();
+                }
+            }
+            typeWriter();
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+});
+new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+},
+    breakpoints: {
+        768: {
+            slidesPerView: 2,
+        },
+        1024: {
+            slidesPerView: 3,
+        },
+    },
+});
+    </script>
+</body>
+</html>
